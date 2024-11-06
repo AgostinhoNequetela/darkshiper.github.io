@@ -1,0 +1,374 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #000;
+    height: 100vh;
+
+}
+
+.interface{
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.flex{
+    display: flex;
+}
+
+header{
+    padding: 40px 4%;
+}
+
+header > .interface{
+    display: flex;
+    align-items: space-between;
+    justify-content: space-between;
+}
+
+.logo {
+    max-width: 150px; /* Ajuste o tamanho do logo */
+    height: auto; /* Mantém a proporção */
+}
+
+header a{
+    color: #aaaaaa;
+    display: inline-block;
+    margin: 0;
+    /*transition: 1s;*/
+    
+}
+
+header a:hover{
+    color: rgb(204, 124, 204);
+    transform: scale(1.05);
+}
+
+header nav ul{
+    list-style-type: none;
+}
+
+header nav ul li {
+    display: inline-block;
+    padding: 0 40px;
+}
+
+.btn-contato button{
+    padding: 10px 40px;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: rgb(211, 74, 211);
+    border: 0;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: .2s;
+
+}
+
+h2.titulo{
+    color: #fff;
+    font-size: 38px;
+    text-align: center;
+    margin: 55px;
+}
+h2.titulo span{
+    color: rgb(185, 45, 185);
+}
+
+button:hover, form .btn-enviar input:hover{
+    box-shadow: 0px 0px 8px rgb(100, 7, 187) ;
+    transform: scale(1.05);
+}
+
+/* esilo do topo do site*/
+
+.imagem-direita {
+    max-width: 100%; /* Ajusta a largura da imagem */
+    height: auto; /* Mantém a proporção da imagem */
+    margin-left: 20px; /* Espaço entre o texto e a imagem */
+}
+
+section.topo-do-site .flex{
+    align-items: center;
+    justify-content: center;
+    gap: 90px;
+}
+
+.topo-do-site h1{
+    color: #fff;
+    font-size: 42px;
+    line-height: 40px;
+}
+
+.topo-do-site h1 span{
+    color: #00FF08;
+}
+
+.topo-do-site .text-topo-site p{
+    color: #fff;
+    margin: 40px;
+}
+.topo-do-site .imagem-direita{
+    position: relative;
+    animation: flutuar 2s ease-in-out infinite alternate;
+}
+
+
+@keyframes flutuar{
+    0%{
+        top: 0;
+    }
+    100%{
+        top: 30px
+    }
+}
+
+/*Estilo das espesialidades*/
+section.especialidades{
+    padding: 40px 4%;
+}
+
+section.especialidades .flex{
+    gap: 60px;
+    
+}
+
+.especialidades .especialidades-box{
+    color: #fff;
+    padding: 55px;
+    border: 2px solid #fff;
+    border-radius: 25px;
+    transition: .2s;
+}
+
+.especialidades .especialidades-box:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 8px #fff;
+}
+
+/*section.especialidades{
+    color: #fff;
+    padding: 55px;
+}*/
+
+.especialidades .especialidades-box i{
+    font-size: 72px;
+    color: rgb(170, 9, 170);
+}
+
+.especialidades .especialidades-box h3{
+    font-size: 28px;
+    margin: 15px 0;
+}
+
+/*SOBRE*/
+section.sobre{
+    padding: 80px 4%;
+}
+.sobre .txt-sobre{
+    color: #fff;
+}
+
+section.sobre .flex{
+    align-items: center;
+    gap: 60px;
+}
+
+
+section.sobre .flex h2{
+    font-size: 40px;
+}
+
+section.sobre .flex h2 span{
+    color: rgb(170, 9, 170);
+    display: block;
+    line-height: 40px;
+    margin-bottom: 32px;
+}
+
+
+section.sobre p{
+    margin: 20px 0;
+    text-align: justify;
+}
+
+.btn-social button{
+    width: 60px;
+    height: 60px;
+    border-radius: 49px;
+    border: none;
+    background-color:  rgb(170, 9, 170);
+    font-size: 22px;
+    cursor: pointer;
+    margin: 0 5px ;
+    transition: .2s;
+
+}
+
+/*nossos portofolios*/
+section.portfólio{
+    padding: 88px 4%;
+    box-shadow: 0 0 40px 10px #ffffff1d;
+}
+
+.img-port{
+    width: 360px ;
+    height: 460px;
+    background-size: cover;
+    background-position: 100% 0%;
+    transition: 8s;
+    cursor: pointer;
+    border-radius: 40px;
+    position: relative;
+}
+
+.img-port:hover{
+    background-position: 100% 100%;
+    
+}
+
+section.portfólio .flex{
+    justify-content: space-around;
+    margin-top: 60px;
+}
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #21012757;
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: 600;
+    opacity: 0;
+    transition: .5s;
+}
+
+.overlay:hover{
+    opacity: 1;
+}
+
+/*formulario*/
+section.formulario{
+    padding: 88px 4%;
+}
+form{
+    max-width: 500px;
+    margin:0 auto ;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+form input, form textarea{
+    width: 100%;
+    background-color: #242424;
+    border: 0;
+    outline: 0;
+    padding: 20px 15px;
+    border-radius: 15px;
+    color: #fff;
+    font-size: 18px;
+}
+
+form textarea{
+    resize: none;
+    max-height: 200px;
+}
+
+form .btn-enviar{
+    margin-top: 17px;
+    text-align: center;
+}
+
+form .btn-enviar input{
+    width: 120px;
+    background-color: rgb(170, 9, 170);
+    color: #000;
+    font-weight: 700;
+    cursor: pointer;
+    transition: .2s;
+}
+/*roda pe*/
+footer{
+    padding: 40px 4%;
+    box-shadow: 0 0 40px 10px #ffffff1d;
+}
+
+footer .line-footer{
+    padding: 20px 0;
+}
+
+.borda{
+    border-top: 2px solid rgb(170, 9, 170);
+}
+
+footer .flex{
+    justify-content: space-between;
+}
+
+footer .line-footer p i{
+    color:rgb(170, 9, 170);
+    font-size: 22px;
+}
+
+footer .line-footer p a{
+    color:#fff ;
+}
+/* Estilos básicos */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.gallery-container {
+    position: relative;
+    max-width: 600px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gallery-image {
+    width: 100%;
+    height: auto;
+    display: none;
+}
+
+.active {
+    display: block;
+}
+
+/* Estilo dos botões de navegação */
+.navigation-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    z-index: 10;
+}
+
+.prev-button {
+    left: 10px; /* Botão à esquerda */
+}
+
+.next-button {
+    right: 10px; /* Botão à direita */
+}
